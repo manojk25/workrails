@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<h1> Products </h1>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Id</th>
+			<th>Price</th>
+			<th>Category</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @products.each do |production| %>
+		<tr>
+			<td><%= production.name %></td>
+			<td><%= production.identity %></td>
+			<td><%= production.price %></td>
+			<td><%= production.category %></td>
+			<td><%= link_to 'Show', production %></td>
+			<td><%= link_to 'Edit', edit_production_path(production) %></td>
+			<td><%= link_to 'Destroy', production, method: :delete, data:  {confirm: 'Are You Sure ?'} %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br>
+<%= link_to 'New Product', new_production_path %>
