@@ -1,2 +1,2 @@
 # workrails
-containin practice files only
+contain practice files only
